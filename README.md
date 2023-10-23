@@ -1,4 +1,4 @@
 # naogeng
-sbxxl
+sb
 
 ÷־׃טחשֵֵ÷ֵ³ֹ¹¦
