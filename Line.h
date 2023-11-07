@@ -6,15 +6,18 @@
 typedef struct linkedqueue
 {
     Patient patient;
-    linkedqueue* next;
+    linkedqueue *rear;
+    linkedqueue *front;
 
     linkedqueue(){
-        this->next = nullptr;
+        this->rear = nullptr;
+        this->front = nullptr;
     }
 
     linkedqueue(Patient patient){
       this->patient = patient;
-      this->next = nullptr;
+      this->rear = nullptr;
+      this->front = nullptr;
     }
 
     linkedqueue(std::string name,std::string ID,int roomNumber,std::string doctor)
@@ -24,7 +27,8 @@ typedef struct linkedqueue
         this->patient.ID = ID;
         this->patient.roomNumber = roomNumber;
         this->patient.doctor = doctor;
-        this->next = nullptr;
+        this->rear = nullptr;
+        this->front = nullptr;
     }
 
 }LinkedNode, *LinkedQueue;
