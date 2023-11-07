@@ -1,6 +1,6 @@
 #ifndef __LINKEDQUEUE_H__
 #define __LINKEDQUEUE_H__
-include "patient.h"
+#include "patient.h"
 
 
 //结点结构体类型定义
