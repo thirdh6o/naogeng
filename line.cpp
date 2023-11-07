@@ -6,7 +6,7 @@
 */
 
 void push(LinkedQueue& line){
-A
+
 
 }
 
