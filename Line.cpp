@@ -5,7 +5,12 @@
 @brief
 */
 
-void push(LinkedQueue& line){
+void push(LinkedQueue& s){
+     QueueNode *p;
+     p->data=x;        
+     p->next=NULL;    
+     s->rear->next=p;   
+     s->rear=p;       
 
 }
 
@@ -36,5 +41,14 @@ void printQueue(LinkedQueue& line){
 
 //获取队列长度
 int lengthQueue(LinkedQueue& line){
-    
+    QueueNode *p;
+    p=line.front;
+ 
+    int length=0;
+    while(p->next)
+    {
+        length++;
+        p=p->next;
+    }
+    return length;
 }
