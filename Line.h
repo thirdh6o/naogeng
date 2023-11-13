@@ -6,7 +6,7 @@
 
 typedef struct Node
 {
-    Patient data;  
+     Patient patient;  
      struct Node * next; 
 }QueueNode;
 
