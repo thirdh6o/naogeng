@@ -15,7 +15,13 @@ void push(LinkedQueue& s){
 }
 
 //出队
-void pop(LinkedQueue& line){
+void pop(LinkedQueue& s){
+if(Empty(s))
+     {
+         printf("队列为空，无法获取队首元素\n\n");
+         return 0;
+     }
+     return s.front->next->data;
 
 }
 
