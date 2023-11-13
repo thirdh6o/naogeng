@@ -16,11 +16,11 @@ void push(LinkedQueue& s,Patient x){
 
 //出队
 void pop(LinkedQueue& s,Patient *e){
-if(Empty(s))
-     {
+    if(Empty(s))
+    {
          printf("队列为空\n");
          return;
-     }
+    }
      
      QueueNode *p;
      p=s->front->next;
@@ -30,9 +30,7 @@ if(Empty(s))
      }
      *e=p->patient;
      s->front->next=p->next;
-     free(p)
-
-
+     delete p;
 }
 
 //获取队头
