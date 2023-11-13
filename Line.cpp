@@ -35,17 +35,17 @@ void pop(LinkedQueue& s,Patient *e){
 
 //获取队头
 Patient getHead(LinkedQueue& s){
-if(Empty(s))
-     {
-         printf("队列为空\n");
+    if(Empty(s))
+    {
+        std::cout << "队列为空" << std::endl;
          return 0;
-     }
-     return s.front->next->patient;
+    }
+    return s.front->next->patient;
 }
 
 //判断是否空队
 int emptyQueue(LinkedQueue& s){
-if(s.front==s.rear)
+    if(s.front==s.rear)
     {
         return 1;
     }
