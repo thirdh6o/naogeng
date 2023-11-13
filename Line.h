@@ -34,6 +34,7 @@ void printQueue(LinkedQueue& line);
 
 //获取队列长度
 int lengthQueue(LinkedQueue& line);
+ 
 
 
 #endif

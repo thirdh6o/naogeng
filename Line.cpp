@@ -7,7 +7,6 @@
 
 void push(LinkedQueue& line){
 
-
 }
 
 //出队
@@ -22,7 +21,11 @@ Patient getHead(LinkedQueue& line){
 
 //判断是否空队
 int emptyQueue(LinkedQueue& line){
-
+if(line.front==line.rear)
+    {
+        return 1;
+    }
+    return 0;
 }
 
 //遍历输出病人信息
