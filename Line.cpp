@@ -5,9 +5,9 @@
 @brief
 */
 
-void push(LinkedQueue& s){
+void push(LinkedQueue& s,Patient x){
      QueueNode *p;
-     p->data=x;        
+     p->patient=x;        
      p->next=NULL;    
      s->rear->next=p;   
      s->rear=p;       
@@ -15,24 +15,39 @@ void push(LinkedQueue& s){
 }
 
 //出队
-void pop(LinkedQueue& s){
+void pop(LinkedQueue& s,Patient *e){
 if(Empty(s))
      {
-         printf("队列为空，无法获取队首元素\n\n");
-         return 0;
+         printf("队列为空\n");
+         return;
      }
-     return s.front->next->data;
+     
+     QueueNode *p;
+     p=s->front->next;
+     if(p==s->rear)    
+     {
+         s->front=s->rear; 
+     }
+     *e=p->patient;
+     s->front->next=p->next;
+     free(p)
+
 
 }
 
 //获取队头
-Patient getHead(LinkedQueue& line){
-
+Patient getHead(LinkedQueue& s){
+if(Empty(s))
+     {
+         printf("队列为空\n");
+         return 0;
+     }
+     return s.front->next->patient;
 }
 
 //判断是否空队
-int emptyQueue(LinkedQueue& line){
-if(line.front==line.rear)
+int emptyQueue(LinkedQueue& s){
+if(s.front==s.rear)
     {
         return 1;
     }
@@ -40,15 +55,15 @@ if(line.front==line.rear)
 }
 
 //遍历输出病人信息
-void printQueue(LinkedQueue& line){
+void printQueue(LinkedQueue& scanf_s){
 
 }
 
 
 //获取队列长度
-int lengthQueue(LinkedQueue& line){
+int lengthQueue(LinkedQueue& s){
     QueueNode *p;
-    p=line.front;
+    p=s.front;
  
     int length=0;
     while(p->next)
