@@ -3,35 +3,17 @@
 #include "patient.h"
 #include <cstddef>
 
-typedef struct linkedqueue
+
+typedef struct Node
 {
-    Patient patient;
-    linkedqueue *rear;
-    linkedqueue *front;
+    Patient data;  
+     struct Node * next; 
+}QueueNode;
 
-    linkedqueue(){
-        this->rear = nullptr;
-        this->front = nullptr;
-    }
-
-    linkedqueue(Patient patient){
-      this->patient = patient;
-      this->rear = nullptr;
-      this->front = nullptr;
-    }
-
-    linkedqueue(std::string name,std::string ID,int roomNumber,std::string doctor)
-    {
-
-        this->patient.name = name;
-        this->patient.ID = ID;
-        this->patient.roomNumber = roomNumber;
-        this->patient.doctor = doctor;
-        this->rear = nullptr;
-        this->front = nullptr;
-    }
-
-}LinkedNode, *LinkedQueue;
+typedef struct
+{
+    QueueNode *front,*rear;
+}LinkedQueue;
 
 
 //»Î∂”
