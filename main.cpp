@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "Line.h"
+//#include "Patient.h"
 
 
 int main() {
@@ -23,7 +24,8 @@ int main() {
         switch (choice) {
         case 1: {
             // 入队操作
-            std::string name, ID, roomNumber, doctor;
+            std::string name, ID, doctor;
+            int roomNumber;
             int priority;
 
             std::cout << "请输入患者姓名: ";
@@ -37,13 +39,13 @@ int main() {
             std::cout << "请输入患者优先级: ";
             std::cin >> priority;
 
-            Patient newPatient(name, ID, priority, roomNumber, doctor);
+            Patient newPatient(name, ID, roomNumber, doctor);
             push(patients, newPatient);
             break;
         }
         case 2: {
             // 出队操作
-            if (!isEmpty(patients)) {
+            if (emptyQueue(patients)) {
                 Patient poppedPatient;
                 pop(patients, &poppedPatient);
                 std::cout << "出队患者信息：" << std::endl;
@@ -59,7 +61,7 @@ int main() {
         }
         case 3: {
             // 查看队头患者信息
-            if (!isEmpty(patients)) {
+            if (emptyQueue(patients)) {
                 Patient headPatient = getHead(patients);
                 std::cout << "队头患者信息：" << std::endl;
                 std::cout << "姓名：" << headPatient.name << std::endl;
