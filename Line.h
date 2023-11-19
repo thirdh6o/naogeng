@@ -17,13 +17,13 @@ typedef struct
 
 
 //入队
-void push(LinkedQueue& s,Patient x)
+void push(LinkedQueue& s,Patient x);
 
 //出队
-void pop(LinkedQueue& s,Patient *e)
+void pop(LinkedQueue& s,Patient *e) ;
 
 //获取队头
-Patient getHead(LinkedQueue& s)
+Patient getHead(LinkedQueue& s);
 
 //判断是否空队
 int emptyQueue(LinkedQueue& s);
@@ -35,7 +35,7 @@ void printQueue(LinkedQueue& s);
 //获取队列长度
 int lengthQueue(LinkedQueue& s);
  
-
+void InitQueue(LinkedQueue& s)
 
 #endif
 

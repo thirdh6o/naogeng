@@ -71,3 +71,16 @@ int lengthQueue(LinkedQueue& s){
     }
     return length;
 }
+
+void InitQueue(LinkedQueue& s)
+{
+	QueueNode *p;
+	p = new QueueNode;
+	if (!p)
+	{
+		cout << "·ÖÅäÄÚ´æÊ§°Ü" << endl;
+		return;
+	}
+	p->next = NULL;
+	s.front = s.rear = p;
+}

@@ -9,14 +9,13 @@ public:
 	std::string doctor;  //坐诊医生
      
 	patient(){}
-	patient(std::string name, std::string ID, int roomNumber, std::string doctor, std::string time)
+	patient(std::string name, std::string ID, int roomNumber, std::string doctor)
 	{
 
 		this->name = name;
 		this->ID = ID;
 		this->roomNumber = roomNumber;
 		this->doctor = doctor;
-		this->time = time;
 	}
    //构造函数
    
