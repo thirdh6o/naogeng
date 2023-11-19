@@ -18,7 +18,7 @@ void push(LinkedQueue& s,Patient x){
 void pop(LinkedQueue& s,Patient *e){
     if(Empty(s))
     {
-         printf("队列为空\n");
+         std::cout << "队列为空" << std::endl;
          return;
     }
      
